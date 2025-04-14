@@ -1,7 +1,7 @@
 #!/bin/bash -e
 # build-linux.sh
 
-CMAKE_FLAGS='-DLINUX_LOCAL_DEV=true'
+CMAKE_FLAGS='-DLINUX_LOCAL_DEV=true -DCMAKE_LINKER=mold -DCMAKE_CXX_FLAGS="-fuse-ld=mold"'
 
 PLAYBACK_CODES_PATH="./Data/PlaybackGeckoCodes/"
 
